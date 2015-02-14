@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="2.5"
+	client="site"
+	method="upgrade">
+  <name>mod_eiko_led</name>
+  <author>Ralf Meyer</author>
+  <creationDate>Mai 2014</creationDate>
+<copyright>Copyright (C) 2014 Ralf Meyer. All rights reserved.</copyright>
+<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+  <authorEmail>webmaster@feuerwehr-veenhusen.de</authorEmail>
+  <authorUrl>www.einsatzkomponente.de</authorUrl>
+  <version>1.0</version>
+<description><![CDATA[<div style="border:1px solid #000; padding-left:5px;"><span style=" font-size: 18px; color:#F00;"><b>LED-Anzeige_Modul für J3.x</b></span><br/><br/><span style="font-size:10px;"></span>Das Modul zur Anzeige des letzten Einsatzes aus der Einsatzkomponente für J3<br/><br/>Für weitere Informationen besuchen Sie bitte unser Supportforum <a href="http:www.einsatzkomponente.de" target="_blank">einsatzkomponente.de</a> </div>
+	]]></description>
+
+  <files>
+    <filename module="mod_eiko_led">mod_eiko_led.php</filename>
+    <filename>index.html</filename>
+    <filename>assets/reports.css</filename>
+    <filename>assets/led.swf</filename>
+    <filename>tmpl/default.php</filename>
+    <filename>tmpl/index.html</filename>
+  </files>
+  
+ <config>
+		<fields name="params">
+			<fieldset name="basic">
+			
+    <field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix :" description="PARAMMODULECLASSSUFFIX" />
+		<field
+			name="spacer214"
+			type="spacer"
+			hr="true"
+		/>
+	<field name="feuerwehr" type="text" default="XY" label="Name der Organisation" description="" size="40" />
+
+	<field name="first" type="text" default="" label="Blitz-Meldung :" description="Dieser Text erscheint vor der Einsatzmeldung" />
+	<field name="links" type="text" default="" label="Link für Blitz-Meldung :" description="Dieser Link ist nur aktiv, wenn nur die Blitz-Meldung im Scrolltext angezeigt wird." />
+
+		<field name="show" type="radio" default="1" label="nur Blitz-Meldung zeigen ?" description="">
+
+		<option value="0">Ja </option>	
+
+		<option value="1">Nein</option>
+
+		</field>
+				<field
+			name="spacer254"
+			type="spacer"
+			hr="true"
+		/>
+
+    <field name="menu_none" type="text" default="kein Einsatz gefunden" label="kein Einsatz gefunden" description="kein Einsatz gefunden" />    
+				<field
+			name="spacer454"
+			type="spacer"
+			hr="true"
+		/>
+	<field name="width" type="text" default="100%" label="LED-Scroll Breite :" description="" />
+	<field name="height" type="text" default="39px" label="LED-Scroll Höhe :" description="" />
+
+		<field
+			name="spacer234"
+			type="spacer"
+			hr="true"
+		/>
+	<field name="mymenuitem" type="menuitem" default="" label="Menüeintrag für die Einsatzübersicht" description="Bitte unbedingt den Menüeintrag für die Einsatzübersicht hier festlegen" />
+
+ </fieldset>
+		</fields>
+	</config>
+  
+</extension>
