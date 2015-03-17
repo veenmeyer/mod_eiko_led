@@ -6,12 +6,12 @@
 	method="upgrade">
   <name>mod_eiko_led</name>
   <author>Ralf Meyer</author>
-  <creationDate>Mai 2014</creationDate>
+  <creationDate>17.03.15</creationDate>
 <copyright>Copyright (C) 2014 Ralf Meyer. All rights reserved.</copyright>
 <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
   <authorEmail>webmaster@feuerwehr-veenhusen.de</authorEmail>
   <authorUrl>www.einsatzkomponente.de</authorUrl>
-  <version>1.0</version>
+  <version>1.01</version>
 <description><![CDATA[<div style="border:1px solid #000; padding-left:5px;"><span style=" font-size: 18px; color:#F00;"><b>LED-Anzeige_Modul für J3.x</b></span><br/><br/><span style="font-size:10px;"></span>Das Modul zur Anzeige des letzten Einsatzes aus der Einsatzkomponente für J3<br/><br/>Für weitere Informationen besuchen Sie bitte unser Supportforum <a href="http:www.einsatzkomponente.de" target="_blank">einsatzkomponente.de</a> </div>
 	]]></description>
 

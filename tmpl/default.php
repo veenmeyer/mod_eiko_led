@@ -12,8 +12,17 @@ $outData = '';
 $link = $links;
 
 if ($show !=0) {
+	
+		$db = JFactory::getDBO();
+		$query = $db->getQuery(true);
+					$query
+						->select('*')
+						->from('`#__eiko_einsatzarten`')
+						->where('id = "' .$frontReports[0]->data1.'"  AND state = "1" ');
+					$db->setQuery($query);
+					$data1 = $db->loadObject();
 
-$outData = 'letzter Einsatz der '.$feuerwehr.' >'.$frontReports[0]->data1.'<   '.$frontReports[0]->summary.' in '.$frontReports[0]->address.'  am '.date('d.m.Y', strtotime($frontReports[0]->date1)).' um'.date(' H:i', strtotime($frontReports[0]->date1)).' Uhr';
+$outData = 'letzter Einsatz der '.$feuerwehr.' >'.$data1->title.'<   '.$frontReports[0]->summary.' in '.$frontReports[0]->address.'  am '.date('d.m.Y', strtotime($frontReports[0]->date1)).' um'.date(' H:i', strtotime($frontReports[0]->date1)).' Uhr';
 
 $link = JRoute::_('index.php?option=com_einsatzkomponente&Itemid='.$mymenuitem.'&view=einsatzbericht&id=' . (int)$frontReports[0]->id); 
 
